@@ -2,6 +2,15 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+## @param global kubean global config
+global:
+  ## @param global.imageRegistry Global Docker image registry
+  imageRegistry: ""
+  ## E.g.
+  ## imagePullSecrets:
+  ##   - myRegistryKeySecretName
+  imagePullSecrets: []
+
 namespace: kubean-system
 
 replicaCount: 1
@@ -10,7 +19,7 @@ image:
   repository: ghcr.io/kubean-io/kubean-operator
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: v0.2.2
+  tag: v0.3.1
 
 imagePullSecrets: []
 nameOverride: ""
