@@ -90,12 +90,10 @@ spec:
                     additionalProperties:
                       type: string
                     type: object
-                  yumRepos:
-                    additionalProperties:
-                      items:
-                        type: string
-                      type: array
-                    type: object
+                  yumRepo:
+                    items:
+                      type: string
+                    type: array
                 type: object
             type: object
           status:
